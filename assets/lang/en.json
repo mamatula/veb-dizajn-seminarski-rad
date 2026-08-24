@@ -1,0 +1,175 @@
+{
+  "common": {
+    "skip": "Skip to content",
+    "switchLang": "Switch language"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "pricing": "Pricing",
+    "programs": "Programs",
+    "faq": "FAQ"
+  },
+  "home": {
+    "hero": {
+      "title": "Training that keeps you moving forward",
+      "lead": "StayFit is a gym in Novi Bečej — equipment for every level, experienced trainers and a team that keeps you coming back.",
+      "ctaPrimary": "Book a free session",
+      "ctaSecondary": "See our services"
+    },
+    "programs": {
+      "label": "Our programs",
+      "title": "Everything you need in one place",
+      "c1t": "Strength training",
+      "c1d": "A free-weights room and machines for every experience level.",
+      "c2t": "Group classes",
+      "c2d": "Zumba, HIIT and yoga with the energy of the whole group.",
+      "c3t": "Cardio zone",
+      "c3d": "Treadmills, bikes and ellipticals for better endurance."
+    },
+    "video": {
+      "label": "Take a look inside",
+      "title": "See what the gym looks like",
+      "lead": "A short video from our gym in Novi Bečej — the space, equipment and atmosphere."
+    },
+    "youtube": {
+      "label": "Train from home too",
+      "title": "Video workouts for every level",
+      "lead": "Can't make it to the gym? Follow one of our recommended video workouts.",
+      "credit": "Video:"
+    },
+    "gallery": {
+      "label": "A look inside",
+      "title": "StayFit from the inside",
+      "g1": "Free-weights room",
+      "g2": "Cardio zone",
+      "g3": "Group training"
+    },
+    "cta": {
+      "title": "Ready to start?",
+      "lead": "Your first session is on us. Come see the gym and meet the trainers.",
+      "button": "Contact us"
+    }
+  },
+  "about": {
+    "title": "Eight years of shaping the whole town",
+    "lead": "StayFit was started in Novi Bečej with a simple idea: serious training and a friendly atmosphere in one place.",
+    "story": {
+      "label": "How it started",
+      "title": "From a small room to a community hub",
+      "p1": "StayFit opened in 2018, in a space of just 120 m². Today we have a modern room with free weights, a cardio zone and space for group classes — but the core idea stayed the same: training available to everyone.",
+      "p2": "We believe training is easier when the people around you cheer you on. That's why StayFit is a community first — trainers follow every member's progress."
+    },
+    "team": {
+      "label": "Meet the team",
+      "title": "Trainers who get you to your goal",
+      "t1role": "Strength trainer",
+      "t1bio": "Specializes in strength training and basic exercise technique.",
+      "t2role": "Group class instructor",
+      "t2bio": "Leads HIIT, zumba and functional training.",
+      "t3role": "Conditioning coach",
+      "t3bio": "Works with athletes and recreational members on endurance."
+    },
+    "visit": {
+      "label": "Come meet us",
+      "title": "Your first visit is always free",
+      "lead": "Drop by for a short tour of the gym and meet the trainers before you decide on a membership.",
+      "button": "Book a tour"
+    },
+    "map": {
+      "label": "Location",
+      "title": "We're located in Novi Bečej",
+      "hoursTitle": "Opening hours",
+      "hours": "Mon–Fri: 7am–10pm · Sat: 9am–8pm · Sun: 9am–2pm",
+      "addressTitle": "Address",
+      "address": "Novi Bečej, Serbia (exact address is posted at the front desk)"
+    }
+  },
+  "contact": {
+    "title": "Fill out the form or visit us",
+    "lead": "Questions about membership or your first session? We usually reply the same business day.",
+    "form": {
+      "title": "Send us a message",
+      "lead": "Fields marked with an asterisk (*) are required.",
+      "name": "Full name *",
+      "namePh": "e.g. Ana Anić",
+      "email": "Email address *",
+      "emailPh": "ana@example.com",
+      "phone": "Phone (optional)",
+      "phonePh": "+381 6X XXX XXXX",
+      "interest": "I'm interested in",
+      "trial": "Free trial session",
+      "message": "Message *",
+      "messagePh": "Tell us how we can help...",
+      "consent": "I agree that StayFit may use my details solely to reply to my inquiry.",
+      "submit": "Send message"
+    },
+    "info": {
+      "addressTitle": "Address",
+      "address": "Novi Bečej, Serbia",
+      "hoursTitle": "Opening hours",
+      "hours": "Mon–Fri: 7am–10pm · Sat: 9am–8pm · Sun: 9am–2pm",
+      "phoneTitle": "Phone & email",
+      "pdfTitle": "Price list"
+    }
+  },
+  "services": {
+    "title": "Choose the plan that fits you",
+    "lead": "No long-term contract — clear prices for beginners and advanced members alike.",
+    "pricing": {
+      "title": "Memberships",
+      "lead": "Prices are monthly. Discounts for longer periods are listed in the PDF price list.",
+      "p1name": "Basic",
+      "p1f1": "Unlimited gym access",
+      "p1f3": "No group classes",
+      "p2name": "Standard",
+      "p2f1": "Unlimited gym access",
+      "p2f2": "All group classes",
+      "p3name": "Premium",
+      "p3f1": "Everything in Standard",
+      "p3f2": "1x monthly session with a trainer",
+      "popular": "Most popular",
+      "cta": "Choose plan",
+      "pdf": "📄 Download full price list (PDF)"
+    },
+    "programs": {
+      "title": "What you can train here",
+      "c1t": "Strength training",
+      "c1d": "Free weights, machines and a guided program for beginners.",
+      "c2t": "Group classes",
+      "c2d": "HIIT, zumba and yoga in a group.",
+      "c3t": "Cardio",
+      "c3d": "Treadmills, bikes and ellipticals."
+    },
+    "schedule": {
+      "title": "Group class schedule",
+      "time": "Time"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "Do I need a long-term contract?",
+      "a1": "No. Membership is paid monthly; paying for 3 or 12 months at once gets you a discount listed in the price list.",
+      "q2": "Do you have equipment for absolute beginners?",
+      "a2": "Yes, every new membership includes a free introduction to the equipment.",
+      "q3": "Is parking available?",
+      "a3": "Yes, we have free parking in front of the building for all members."
+    },
+    "cta": {
+      "title": "Ready to give it a try?",
+      "lead": "Book a free trial session and pick the plan that suits you.",
+      "button": "Contact us"
+    }
+  },
+  "footer": {
+    "about": "StayFit gym in Novi Bečej.",
+    "linksTitle": "Pages",
+    "infoTitle": "Information",
+    "pricelist": "Price list (PDF)",
+    "sitemap": "Sitemap",
+    "contactTitle": "Contact",
+    "rights": "all rights reserved",
+    "schoolNote": "School project — Web Design course"
+  }
+}
