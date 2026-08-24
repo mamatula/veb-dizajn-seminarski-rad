@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt - StayFit</title>
+
+  <meta name="description" content="Kontaktirajte StayFit teretanu u Novom Bečeju - adresa, radno vreme, telefon i mapa lokacije.">
+  <meta name="keywords" content="kontakt StayFit, adresa teretana Novi Bečej, radno vreme teretana">
+  <meta name="author" content="Pavle">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://stayfit-primer.rs/kontakt.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kontakt - StayFit">
+  <meta property="og:description" content="Kontaktirajte StayFit teretanu u Novom Bečeju - adresa, radno vreme, telefon i mapa lokacije.">
+  <meta property="og:image" content="assets/img/hero-1.jpg">
+  <meta property="og:url" content="https://stayfit-primer.rs/kontakt.html">
+  <meta property="og:locale" content="sr_RS">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/img/icons/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">
+        <img src="assets/img/icons/logo-stayfit.png" width="34" height="34" alt="StayFit logo">
+        StayFit
+      </a>
+      <div class="navbar-desno">
+        <ul class="meni">
+          <li><a href="index.html" data-prevod="nav_pocetna">Početna</a></li>
+          <li><a href="o-nama.html" data-prevod="nav_onama">O nama</a></li>
+          <li class="ima-padajuci">
+            <a href="usluge.html"><span data-prevod="nav_usluge">Usluge</span> &#9662;</a>
+            <ul class="padajuci">
+              <li><a href="usluge.html#cenovnik" data-prevod="nav_cenovnik">Cenovnik</a></li>
+              <li><a href="usluge.html#casovi" data-prevod="nav_casovi">Grupni časovi</a></li>
+            </ul>
+          </li>
+          <li><a href="kontakt.html" data-prevod="nav_kontakt">Kontakt</a></li>
+        </ul>
+        <div class="podesavanja">
+          <button type="button" class="dugme-jezik" id="dugmeJezik">EN</button>
+          <div class="dugmad-slova">
+            <button type="button" class="dugme-slovo" data-velicina="malo">A</button>
+            <button type="button" class="dugme-slovo dugme-slovo-aktivan" data-velicina="srednje">A</button>
+            <button type="button" class="dugme-slovo" data-velicina="veliko">A</button>
+          </div>
+          <button type="button" class="dugme-tema" id="dugmeTema" aria-label="Promeni temu">
+            <svg data-ikona="sunce" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.6" y1="4.6" x2="6.7" y2="6.7"/><line x1="17.3" y1="17.3" x2="19.4" y2="19.4"/><line x1="4.6" y1="19.4" x2="6.7" y2="17.3"/><line x1="17.3" y1="6.7" x2="19.4" y2="4.6"/></g></svg>
+            <svg data-ikona="mesec" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8.5 8.5 0 1 1 9.5 4 6.8 6.8 0 0 0 20 14.5Z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="naslov-stranice">
+    <h1 data-prevod="kontakt_naslov">Stupi u <span class="isticanje">kontakt</span></h1>
+  </div>
+
+  <div class="kontakt-sadrzaj">
+    <form class="forma" novalidate>
+      <div class="polje">
+        <label for="ime" data-prevod="forma_ime">Ime i prezime</label>
+        <input type="text" id="ime" name="ime" placeholder="Npr. Ana Anić" data-prevod-placeholder="forma_ime_placeholder">
+        <span class="greska"></span>
+      </div>
+      <div class="polje">
+        <label for="email" data-prevod="forma_email">E-mail adresa</label>
+        <input type="email" id="email" name="email" placeholder="ana@primer.com">
+        <span class="greska"></span>
+      </div>
+      <div class="polje">
+        <label for="poruka" data-prevod="forma_poruka">Poruka</label>
+        <textarea id="poruka" name="poruka" rows="5" placeholder="Napišite nam kako možemo da pomognemo..." data-prevod-placeholder="forma_poruka_placeholder"></textarea>
+        <span class="greska"></span>
+      </div>
+      <button type="submit" class="dugme" data-prevod="forma_dugme">Pošalji poruku</button>
+      <p class="poruka-uspeh" id="uspehForma"></p>
+    </form>
+
+    <div class="kontakt-info">
+      <p data-prevod="info_adresa"><strong>Adresa:</strong> Novi Bečej, Srbija</p>
+      <p data-prevod="info_radno"><strong>Radno vreme:</strong> Pon-Pet 07-22h, Subota 09-20h, Nedelja 09-14h</p>
+      <p data-prevod="info_telefon"><strong>Telefon:</strong> <a href="tel:+381600000000">+381 60 000 0000</a></p>
+      <p data-prevod="info_email"><strong>E-mail:</strong> <a href="mailto:info@stayfit-primer.rs">info@stayfit-primer.rs</a></p>
+      <div class="mapa">
+        <iframe src="https://www.google.com/maps?q=Novi%20Be%C4%8Dej%2C%20Srbija&output=embed" loading="lazy" title="StayFit na mapi"></iframe>
+      </div>
+      <a href="assets/docs/stayfit-lokacija.pdf" download class="dugme-preuzmi" data-prevod="preuzmi_pdf">Preuzmi mapu lokacije (PDF)</a>
+    </div>
+  </div>
+
+  <footer>
+    <ul class="footer-meni">
+      <li><a href="index.html" data-prevod="nav_pocetna">Početna</a></li>
+      <li><a href="o-nama.html" data-prevod="nav_onama">O nama</a></li>
+      <li><a href="usluge.html" data-prevod="nav_usluge">Usluge</a></li>
+      <li><a href="kontakt.html" data-prevod="nav_kontakt">Kontakt</a></li>
+    </ul>
+    <p data-prevod="footer_kreirao">Kreirao Pavle | Sva prava zadržana</p>
+  </footer>
+
+  <script src="assets/js/podesavanja.js"></script>
+  <script src="assets/js/validacija.js"></script>
+</body>
+</html>

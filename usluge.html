@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="sr" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Usluge - StayFit</title>
+
+  <meta name="description" content="Pregledajte cenovnik i raspored grupnih časova u StayFit teretani - standardna, vikend, dnevna i studentska članarina.">
+  <meta name="keywords" content="cenovnik teretana, grupni časovi, cene članarina StayFit, raspored časova">
+  <meta name="author" content="Pavle">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://stayfit-primer.rs/usluge.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Usluge - StayFit">
+  <meta property="og:description" content="Pregledajte cenovnik i raspored grupnih časova u StayFit teretani.">
+  <meta property="og:image" content="assets/img/hero-3.jpg">
+  <meta property="og:url" content="https://stayfit-primer.rs/usluge.html">
+  <meta property="og:locale" content="sr_RS">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/img/icons/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <style>
+    /* Ova stranica koristi isključivo Bootstrap klase. Ovaj <style> blok ne
+       dodaje nijednu novu CSS klasu - samo učitava lokalni font, menja
+       Bootstrapove sopstvene CSS promenljive (--bs-primary i slično) i
+       reaguje na id/data-* atribute koje postavlja podesavanja.js. */
+    @font-face{
+      font-family:"Poppins";
+      src:url("assets/fonts/Poppins-Regular.woff") format("woff");
+      font-weight:400;
+    }
+    @font-face{
+      font-family:"Poppins";
+      src:url("assets/fonts/Poppins-Bold.woff") format("woff");
+      font-weight:700;
+    }
+    :root{
+      --bs-body-font-family:"Poppins",Arial,sans-serif;
+      --bs-primary:#5c9430;
+      --bs-primary-rgb:92,148,48;
+      --bs-link-color:#5c9430;
+      --bs-link-hover-color:#4a7626;
+    }
+    /* tamna/svetla pozadina sadržaja - prati koren <html data-bs-theme="..."> koji
+       menja dugme za temu (isti mehanizam kao Bootstrapove sopstvene [data-bs-theme] promenljive) */
+    [data-bs-theme="dark"]{
+      --bs-body-bg:#111111;
+      --bs-dark-rgb:17,17,17;
+      --bs-tertiary-bg:#1a1a1a;
+    }
+    [data-bs-theme="light"]{
+      --bs-body-bg:#f4f4f4;
+      --bs-tertiary-bg:#e9e9e9;
+    }
+    .btn-primary{
+      --bs-btn-bg:var(--bs-primary);
+      --bs-btn-border-color:var(--bs-primary);
+      --bs-btn-hover-bg:#4a7626;
+      --bs-btn-hover-border-color:#4a7626;
+    }
+    .btn-outline-primary{
+      --bs-btn-color:var(--bs-primary);
+      --bs-btn-border-color:var(--bs-primary);
+      --bs-btn-hover-bg:var(--bs-primary);
+      --bs-btn-hover-border-color:var(--bs-primary);
+    }
+    /* hover efekat na kutijama sa cenama (i dalje samo Bootstrap klasa .border,
+       ovde joj samo dodajemo :hover stanje - nije nova klasa u HTML-u) */
+    .border{
+      transition:border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .border:hover{
+      border-color:var(--bs-primary) !important;
+      box-shadow:0 0 18px rgba(var(--bs-primary-rgb), 0.55);
+      transform:scale(1.02);
+    }
+    /* skaliranje dugmadi na hover (i dalje samo Bootstrapova klasa .btn) */
+    .btn{
+      transition:transform 0.15s, background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
+    }
+    .btn:hover{
+      transform:scale(1.06);
+    }
+    /* logo je crn crtež na providnoj pozadini - beli krug iza njega da bude
+       vidljiv na tamnoj navigaciji (i dalje samo Bootstrapova klasa .navbar-brand) */
+    .navbar-brand img{
+      background:#fff;
+      border-radius:50%;
+      padding:3px;
+    }
+    /* dugme za temu (id="dugmeTema") - prikazuje sunce ili mesec u zavisnosti
+       od trenutne teme, bez ijedne nove CSS klase */
+    #dugmeTema svg[data-ikona="mesec"]{
+      display:none;
+    }
+    [data-bs-theme="light"] #dugmeTema svg[data-ikona="sunce"]{
+      display:none;
+    }
+    [data-bs-theme="light"] #dugmeTema svg[data-ikona="mesec"]{
+      display:block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary-subtle" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/img/icons/logo-stayfit.png" width="30" height="30" alt="StayFit logo">
+        StayFit
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#glavniMeni">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="glavniMeni">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html" data-prevod="nav_pocetna">Početna</a></li>
+          <li class="nav-item"><a class="nav-link" href="o-nama.html" data-prevod="nav_onama">O nama</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="usluge.html" role="button" data-bs-toggle="dropdown" data-prevod="nav_usluge">Usluge</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#cenovnik" data-prevod="nav_cenovnik">Cenovnik</a></li>
+              <li><a class="dropdown-item" href="#casovi" data-prevod="nav_casovi">Grupni časovi</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="kontakt.html" data-prevod="nav_kontakt">Kontakt</a></li>
+          <li class="nav-item d-flex align-items-center gap-2 mt-3 mt-lg-0 ms-lg-3">
+            <button type="button" class="btn btn-sm btn-outline-light" id="dugmeJezik">EN</button>
+            <div class="btn-group btn-group-sm" role="group">
+              <button type="button" class="btn btn-outline-light" data-velicina="malo">A</button>
+              <button type="button" class="btn btn-outline-light active" data-velicina="srednje">A</button>
+              <button type="button" class="btn btn-outline-light" data-velicina="veliko">A</button>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-light rounded-circle p-1" id="dugmeTema" aria-label="Promeni temu">
+              <svg data-ikona="sunce" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.6" y1="4.6" x2="6.7" y2="6.7"/><line x1="17.3" y1="17.3" x2="19.4" y2="19.4"/><line x1="4.6" y1="19.4" x2="6.7" y2="17.3"/><line x1="17.3" y1="6.7" x2="19.4" y2="4.6"/></g></svg>
+              <svg data-ikona="mesec" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 14.5A8.5 8.5 0 1 1 9.5 4 6.8 6.8 0 0 0 20 14.5Z"/></svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="text-center py-5">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html" class="link-body-emphasis" data-prevod="nav_pocetna">Početna</a></li>
+          <li class="breadcrumb-item active text-body-secondary" data-prevod="nav_usluge">Usluge</li>
+        </ol>
+      </nav>
+      <h1 class="fw-bold" data-prevod="usluge_naslov">Naše usluge</h1>
+      <p class="text-body-secondary" data-prevod="usluge_podnaslov">Bez ugovorne obaveze na duži rok - jasne cene za sve nivoe.</p>
+    </div>
+  </div>
+
+  <section id="cenovnik" class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-4 text-center" data-prevod="nav_cenovnik">Cenovnik</h2>
+
+        <div class="border border-2 p-4 mb-3 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_standard">Standard</span>
+          <span class="fs-4 fw-bold">3.400 RSD</span>
+        </div>
+        <div class="border border-2 p-4 mb-3 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_vikend">Vikend</span>
+          <span class="fs-4 fw-bold">1.500 RSD</span>
+        </div>
+        <div class="border border-2 p-4 mb-3 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_dnevno">Dnevno</span>
+          <span class="fs-4 fw-bold">400 RSD</span>
+        </div>
+        <div class="border border-2 p-4 mb-3 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_studentska">Studentska članarina</span>
+          <span class="fs-4 fw-bold">2.200 RSD</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="casovi" class="container py-5">
+    <h2 class="fw-bold mb-4" data-prevod="casovi_naslov">Raspored grupnih časova</h2>
+    <div class="table-responsive">
+      <table class="table table-striped align-middle">
+        <thead>
+          <tr>
+            <th scope="col" data-prevod="tabela_termin">Termin</th>
+            <th scope="col" data-prevod="tabela_ponedeljak">Ponedeljak</th>
+            <th scope="col" data-prevod="tabela_sreda">Sreda</th>
+            <th scope="col" data-prevod="tabela_petak">Petak</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">08:00</th>
+            <td data-prevod="tabela_joga">Joga</td><td>-</td><td data-prevod="tabela_joga">Joga</td>
+          </tr>
+          <tr>
+            <th scope="row">18:00</th>
+            <td>HIIT</td><td>Zumba</td><td>HIIT</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-4 text-center" data-prevod="primer_casa_naslov">Primer časa</h2>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube-nocookie.com/embed/sy_IUQ4Y70E" title="Primer treninga u teretani" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h2 class="fw-bold" data-prevod="cta_naslov">Spreman/na da probaš?</h2>
+      <p class="lead" data-prevod="cta_tekst">Zakaži besplatan probni trening još danas.</p>
+      <a href="kontakt.html" class="btn btn-light btn-lg" data-prevod="cta_dugme">Kontaktiraj nas</a>
+    </div>
+  </div>
+
+  <footer class="bg-dark py-4 mt-auto" data-bs-theme="dark">
+    <div class="container d-flex flex-column align-items-center gap-3">
+      <div class="d-flex gap-2 flex-wrap justify-content-center">
+        <a href="index.html" class="btn btn-outline-light btn-sm rounded-pill" data-prevod="nav_pocetna">Početna</a>
+        <a href="o-nama.html" class="btn btn-outline-light btn-sm rounded-pill" data-prevod="nav_onama">O nama</a>
+        <a href="usluge.html" class="btn btn-outline-light btn-sm rounded-pill" data-prevod="nav_usluge">Usluge</a>
+        <a href="kontakt.html" class="btn btn-outline-light btn-sm rounded-pill" data-prevod="nav_kontakt">Kontakt</a>
+      </div>
+      <p class="text-body-secondary small mb-0" data-prevod="footer_kreirao">Kreirao Pavle | Sva prava zadržana</p>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/podesavanja.js"></script>
+</body>
+</html>
