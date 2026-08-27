@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Usluge - StayFit</title>
+  <title>Usluge - Sugar Bar</title>
 
-  <meta name="description" content="Pregledajte cenovnik i raspored grupnih časova u StayFit teretani - standardna, vikend, dnevna i studentska članarina.">
-  <meta name="keywords" content="cenovnik teretana, grupni časovi, cene članarina StayFit, raspored časova">
+  <meta name="description" content="Pregledajte cenovnik i radno vreme prodavnice Sugar Bar - bombone, čokolade i radionice pravljenja slatkiša.">
+  <meta name="keywords" content="cenovnik prodavnice slatkiša, radno vreme Sugar Bar, cene slatkiša Sugar Bar, radionice pravljenja bombona">
   <meta name="author" content="Pavle">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://stayfit-primer.rs/usluge.html">
+  <link rel="canonical" href="https://mamatula.github.io/veb-dizajn-seminarski-rad/usluge.html">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Usluge - StayFit">
-  <meta property="og:description" content="Pregledajte cenovnik i raspored grupnih časova u StayFit teretani.">
+  <meta property="og:title" content="Usluge - Sugar Bar">
+  <meta property="og:description" content="Pregledajte cenovnik i radno vreme prodavnice Sugar Bar.">
   <meta property="og:image" content="assets/img/hero-3.jpg">
-  <meta property="og:url" content="https://stayfit-primer.rs/usluge.html">
+  <meta property="og:url" content="https://mamatula.github.io/veb-dizajn-seminarski-rad/usluge.html">
   <meta property="og:locale" content="sr_RS">
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32.png">
@@ -24,6 +24,10 @@
 
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <style>
+    /* Ova stranica koristi isključivo Bootstrap klase. Ovaj <style> blok ne
+       dodaje nijednu novu CSS klasu - samo učitava lokalni font, menja
+       Bootstrapove sopstvene CSS promenljive (--bs-primary i slično) i
+       reaguje na id/data-* atribute koje postavlja podesavanja.js. */
     @font-face{
       font-family:"Poppins";
       src:url("assets/fonts/Poppins-Regular.woff") format("woff");
@@ -36,14 +40,13 @@
     }
     :root{
       --bs-body-font-family:"Poppins",Arial,sans-serif;
-      --bs-primary:#5c9430;
-      --bs-primary-rgb:92,148,48;
-      --bs-link-color:#5c9430;
-      --bs-link-hover-color:#4a7626;
+      --bs-primary:#f2711c;
+      --bs-primary-rgb:242,113,28;
+      --bs-link-color:#f2711c;
+      --bs-link-hover-color:#d35d0e;
     }
-
-
-
+    /* tamna/svetla pozadina sadržaja - prati koren <html data-bs-theme="..."> koji
+       menja dugme za temu (isti mehanizam kao Bootstrapove sopstvene [data-bs-theme] promenljive) */
     [data-bs-theme="dark"]{
       --bs-body-bg:#111111;
       --bs-dark-rgb:17,17,17;
@@ -56,8 +59,8 @@
     .btn-primary{
       --bs-btn-bg:var(--bs-primary);
       --bs-btn-border-color:var(--bs-primary);
-      --bs-btn-hover-bg:#4a7626;
-      --bs-btn-hover-border-color:#4a7626;
+      --bs-btn-hover-bg:#d35d0e;
+      --bs-btn-hover-border-color:#d35d0e;
     }
     .btn-outline-primary{
       --bs-btn-color:var(--bs-primary);
@@ -65,31 +68,30 @@
       --bs-btn-hover-bg:var(--bs-primary);
       --bs-btn-hover-border-color:var(--bs-primary);
     }
-
-
-
+    /* hover efekat na kutijama sa cenama (i dalje samo Bootstrap klasa .border,
+       ovde joj samo dodajemo :hover stanje - nije nova klasa u HTML-u) */
     .border{
       transition:border-color 0.2s, box-shadow 0.2s, transform 0.2s;
     }
     .border:hover{
       border-color:var(--bs-primary) !important;
-      box-shadow:0 0 18px rgba(var(--bs-primary-rgb), 0.55);
+      box-shadow:0 0 14px rgba(236, 72, 153, 0.45), 0 0 26px rgba(255, 201, 60, 0.35);
       transform:scale(1.02);
     }
-
+    /* skaliranje dugmadi na hover (i dalje samo Bootstrapova klasa .btn) */
     .btn{
       transition:transform 0.15s, background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
     }
     .btn:hover{
       transform:scale(1.06);
     }
-
-    .navbar-brand img{
-      background:#fff;
-      border-radius:50%;
-      padding:3px;
+    /* naslov na vrhu stranice (i dalje samo Bootstrapove klase .text-center i .py-5,
+       ovde mu samo izjednačavamo veličinu fonta sa naslovima na ostalim stranicama) */
+    .text-center.py-5 h1{
+      font-size:2.2rem;
     }
-
+    /* dugme za temu (id="dugmeTema") - prikazuje sunce ili mesec u zavisnosti
+       od trenutne teme, bez ijedne nove CSS klase */
     #dugmeTema svg[data-ikona="mesec"]{
       display:none;
     }
@@ -106,8 +108,8 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary-subtle" data-bs-theme="dark">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img src="assets/img/icons/logo-stayfit.png" width="30" height="30" alt="StayFit logo">
-        StayFit
+        <img src="assets/img/icons/logo-sugarbar.png" width="30" height="30" alt="Sugar Bar logo">
+        Sugar Bar
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#glavniMeni">
         <span class="navbar-toggler-icon"></span>
@@ -120,7 +122,7 @@
             <a class="nav-link dropdown-toggle active" href="usluge.html" role="button" data-bs-toggle="dropdown" data-prevod="nav_usluge">Usluge</a>
             <ul class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="#cenovnik" data-prevod="nav_cenovnik">Cenovnik</a></li>
-              <li><a class="dropdown-item" href="#casovi" data-prevod="nav_casovi">Grupni časovi</a></li>
+              <li><a class="dropdown-item" href="#casovi" data-prevod="nav_casovi">Radionice</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="kontakt.html" data-prevod="nav_kontakt">Kontakt</a></li>
@@ -143,63 +145,93 @@
 
   <div class="text-center py-5">
     <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb justify-content-center">
-          <li class="breadcrumb-item"><a href="index.html" class="link-body-emphasis" data-prevod="nav_pocetna">Početna</a></li>
-          <li class="breadcrumb-item active text-body-secondary" data-prevod="nav_usluge">Usluge</li>
-        </ol>
-      </nav>
-      <h1 class="fw-bold" data-prevod="usluge_naslov">Naše usluge</h1>
-      <p class="text-body-secondary" data-prevod="usluge_podnaslov">Bez ugovorne obaveze na duži rok - jasne cene za sve nivoe.</p>
+      <h1 class="fw-bold text-uppercase" data-prevod="usluge_naslov">Naše usluge</h1>
     </div>
   </div>
 
   <section id="cenovnik" class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <h2 class="fw-bold mb-4 text-center" data-prevod="nav_cenovnik">Cenovnik</h2>
+    <h2 class="fw-bold mb-4 text-center" data-prevod="nav_cenovnik">Cenovnik</h2>
 
-        <div class="border border-2 p-4 mb-3 d-flex justify-content-between align-items-center">
-          <span class="fs-5" data-prevod="stavka_standard">Standard</span>
-          <span class="fs-4 fw-bold">3.400 RSD</span>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="border border-2 p-4 h-100 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_standard">Bombone (100g)</span>
+          <span class="fs-4 fw-bold">350 RSD</span>
         </div>
-        <div class="border border-2 p-4 mb-3 d-flex justify-content-between align-items-center">
-          <span class="fs-5" data-prevod="stavka_vikend">Vikend</span>
+      </div>
+      <div class="col-md-4">
+        <div class="border border-2 p-4 h-100 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_vikend">Čokolada (komad)</span>
+          <span class="fs-4 fw-bold">280 RSD</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="border border-2 p-4 h-100 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_dnevno">Poklon kutija</span>
           <span class="fs-4 fw-bold">1.500 RSD</span>
         </div>
-        <div class="border border-2 p-4 mb-3 d-flex justify-content-between align-items-center">
-          <span class="fs-5" data-prevod="stavka_dnevno">Dnevno</span>
-          <span class="fs-4 fw-bold">400 RSD</span>
+      </div>
+      <div class="col-md-4">
+        <div class="border border-2 p-4 h-100 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_studentska">Radionica (po osobi)</span>
+          <span class="fs-4 fw-bold">1.800 RSD</span>
         </div>
-        <div class="border border-2 p-4 mb-3 d-flex justify-content-between align-items-center">
-          <span class="fs-5" data-prevod="stavka_studentska">Studentska članarina</span>
+      </div>
+      <div class="col-md-4">
+        <div class="border border-2 p-4 h-100 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_karamele">Karamele (100g)</span>
+          <span class="fs-4 fw-bold">320 RSD</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="border border-2 p-4 h-100 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_lizalice">Lizalice (komad)</span>
+          <span class="fs-4 fw-bold">150 RSD</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="border border-2 p-4 h-100 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_praline">Praline (kutija)</span>
+          <span class="fs-4 fw-bold">900 RSD</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="border border-2 p-4 h-100 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_kokice">Kokice u čokoladi (100g)</span>
+          <span class="fs-4 fw-bold">300 RSD</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="border border-2 p-4 h-100 d-flex justify-content-between align-items-center">
+          <span class="fs-5" data-prevod="stavka_rodjendan">Rođendanski paket</span>
           <span class="fs-4 fw-bold">2.200 RSD</span>
         </div>
-
       </div>
     </div>
   </section>
 
   <section id="casovi" class="container py-5">
-    <h2 class="fw-bold mb-4" data-prevod="casovi_naslov">Raspored grupnih časova</h2>
+    <h2 class="fw-bold mb-4" data-prevod="casovi_naslov">Radno vreme</h2>
     <div class="table-responsive">
       <table class="table table-striped align-middle">
         <thead>
           <tr>
-            <th scope="col" data-prevod="tabela_termin">Termin</th>
-            <th scope="col" data-prevod="tabela_ponedeljak">Ponedeljak</th>
-            <th scope="col" data-prevod="tabela_sreda">Sreda</th>
-            <th scope="col" data-prevod="tabela_petak">Petak</th>
+            <th scope="col" data-prevod="tabela_dan">Dan</th>
+            <th scope="col" data-prevod="tabela_radno_vreme">Radno vreme</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">08:00</th>
-            <td data-prevod="tabela_joga">Joga</td><td>-</td><td data-prevod="tabela_joga">Joga</td>
+            <th scope="row" data-prevod="dan_radnim">Ponedeljak - Petak</th>
+            <td>08 - 20h</td>
           </tr>
           <tr>
-            <th scope="row">18:00</th>
-            <td>HIIT</td><td>Zumba</td><td>HIIT</td>
+            <th scope="row" data-prevod="dan_subota">Subota</th>
+            <td>08 - 20h</td>
+          </tr>
+          <tr>
+            <th scope="row" data-prevod="dan_nedelja">Nedelja</th>
+            <td>09 - 14h</td>
           </tr>
         </tbody>
       </table>
@@ -209,9 +241,9 @@
   <section class="container py-5">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <h2 class="fw-bold mb-4 text-center" data-prevod="primer_casa_naslov">Primer časa</h2>
+        <h2 class="fw-bold mb-4 text-center" data-prevod="primer_casa_naslov">Video snimak</h2>
         <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube-nocookie.com/embed/sy_IUQ4Y70E" title="Primer treninga u teretani" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Xt4M0kwYMrU?si=KORY8oeFqsw0XqK3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -219,8 +251,8 @@
 
   <div class="bg-primary text-white text-center py-5">
     <div class="container">
-      <h2 class="fw-bold" data-prevod="cta_naslov">Spreman/na da probaš?</h2>
-      <p class="lead" data-prevod="cta_tekst">Zakaži besplatan probni trening još danas.</p>
+      <h2 class="fw-bold" data-prevod="cta_naslov">Spremni za nešto slatko?</h2>
+      <p class="lead" data-prevod="cta_tekst">Poruči slatkiše ili rezerviši mesto na radionici još danas.</p>
       <a href="kontakt.html" class="btn btn-light btn-lg" data-prevod="cta_dugme">Kontaktiraj nas</a>
     </div>
   </div>

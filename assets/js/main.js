@@ -1,5 +1,3 @@
-// main.js - slajder slika na početnoj stranici
-
 const slajderSlike = [
   "assets/img/galerija/slika-1.jpg",
   "assets/img/galerija/slika-2.jpg",

@@ -1,7 +1,3 @@
-// validacija.js - provera kontakt forme pre slanja (samo na kontakt.html)
-// Sajt je statičan (bez servera), pa se nakon uspešne provere samo prikazuje
-// poruka o uspehu i forma se resetuje.
-
 const forma = document.querySelector(".forma");
 
 if (forma) {

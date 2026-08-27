@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stayfit-primer.rs/sitemap.xml
+Sitemap: https://mamatula.github.io/veb-dizajn-seminarski-rad/sitemap.xml

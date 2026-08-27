@@ -1,3 +1,7 @@
+/* Sugar Bar - style.css
+   Obicna CSS datoteka, bez SASS-a i bez CSS okvira (osim na strani usluge.html).
+   Seminarski rad - predmet Veb dizajn. */
+
 @font-face{
   font-family:"Poppins";
   src:url("../fonts/Poppins-Regular.woff") format("woff");
@@ -13,13 +17,15 @@
   --bg:#111111;
   --tekst:#ffffff;
   --siva:#b3b3b3;
-  --akcenat:#5c9430;
+  --akcenat:#f2711c;
+  --akcenat2:#ec4899;
+  --akcenat3:#ffc93c;
   --linija:#262626;
   --ivica:#333333;
   --panel:#1a1a1a;
 }
 
-/* svetla tema */
+/* svetla tema - uključuje se JS-om preko atributa data-tema na <html> */
 :root[data-tema="light"]{
   --bg:#f4f4f4;
   --tekst:#141414;
@@ -75,7 +81,7 @@ h1, h2, h3{
 }
 
 .dugme:hover{
-  background:#4a7626;
+  background:#d35d0e;
   transform:scale(1.06);
 }
 
@@ -104,12 +110,6 @@ header{
   font-size:1.2rem;
 }
 
-.logo img{
-  background:#fff;
-  border-radius:50%;
-  padding:3px;
-}
-
 .navbar-desno{
   display:flex;
   align-items:center;
@@ -131,7 +131,7 @@ header{
   color:var(--akcenat);
 }
 
-/* padajuci meni */
+/* ---------- padajuci meni (dropdown ispod "Usluge") ---------- */
 
 .ima-padajuci{
   position:relative;
@@ -165,7 +165,7 @@ header{
   display:block;
 }
 
-/* settings */
+/* ---------- podešavanja (jezik / veličina slova / tema) ---------- */
 
 .podesavanja{
   display:flex;
@@ -228,7 +228,8 @@ header{
 }
 
 .dugme-slovo-aktivan{
-  color:var(--akcenat);
+  background:var(--akcenat3);
+  color:#141414;
 }
 
 .dugme-tema{
@@ -278,7 +279,7 @@ header{
   }
 }
 
-/* baner */
+/* ---------- baner (hero) ---------- */
 
 .baner{
   padding:70px 20px;
@@ -316,6 +317,7 @@ header{
   width:100%;
   height:380px;
   border-radius:6px;
+  object-fit:cover;
   transition:transform 0.3s;
 }
 
@@ -332,7 +334,7 @@ header{
   }
 }
 
-/* info sekcija */
+/* ---------- info sekcija (slika + tekst naizmenicno) ---------- */
 
 .info{
   padding:60px 20px;
@@ -359,6 +361,7 @@ header{
   width:100%;
   height:380px;
   border-radius:6px;
+  object-fit:cover;
   transition:transform 0.3s;
 }
 
@@ -382,7 +385,7 @@ header{
   }
 }
 
-/* footer */
+/* ---------- footer ---------- */
 
 footer{
   border-top:1px solid var(--linija);
@@ -417,7 +420,7 @@ footer p{
   font-size:0.85rem;
 }
 
-/* naslov */
+/* ---------- naslov stranice (O nama / Usluge / Kontakt) ---------- */
 
 .naslov-stranice{
   text-align:center;
@@ -430,10 +433,10 @@ footer p{
 }
 
 .isticanje{
-  color:var(--akcenat);
+  color:var(--akcenat2);
 }
 
-/* video */
+/* ---------- video ---------- */
 
 .video-sadrzaj{
   max-width:900px;
@@ -447,7 +450,7 @@ footer p{
   display:block;
 }
 
-/* tim */
+/* ---------- tim ---------- */
 
 .tim{
   max-width:1100px;
@@ -464,6 +467,7 @@ footer p{
   width:140px;
   height:140px;
   border-radius:50%;
+  object-fit:cover;
   margin:0 auto 16px;
   transition:transform 0.3s;
 }
@@ -482,7 +486,7 @@ footer p{
   font-size:0.9rem;
 }
 
-/* cenovnik- */
+/* ---------- cenovnik (lista usluga) ---------- */
 
 .cenovnik{
   max-width:800px;
@@ -515,7 +519,7 @@ footer p{
   white-space:nowrap;
 }
 
-/* kontakt forma */
+/* ---------- kontakt forma ---------- */
 
 .kontakt-sadrzaj{
   max-width:1100px;
@@ -626,7 +630,7 @@ footer p{
   }
 }
 
-/* slajder */
+/* ---------- slajder slika ---------- */
 
 .slajder{
   max-width:900px;
@@ -644,6 +648,7 @@ footer p{
   max-width:700px;
   width:100%;
   height:450px;
+  object-fit:cover;
   transition:transform 0.3s;
 }
 
