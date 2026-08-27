@@ -24,10 +24,7 @@
 
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <style>
-    /* Ova stranica koristi isključivo Bootstrap klase. Ovaj <style> blok ne
-       dodaje nijednu novu CSS klasu - samo učitava lokalni font, menja
-       Bootstrapove sopstvene CSS promenljive (--bs-primary i slično) i
-       reaguje na id/data-* atribute koje postavlja podesavanja.js. */
+
     @font-face{
       font-family:"Poppins";
       src:url("assets/fonts/Poppins-Regular.woff") format("woff");
@@ -45,8 +42,9 @@
       --bs-link-color:#f2711c;
       --bs-link-hover-color:#d35d0e;
     }
-    /* tamna/svetla pozadina sadržaja - prati koren <html data-bs-theme="..."> koji
-       menja dugme za temu (isti mehanizam kao Bootstrapove sopstvene [data-bs-theme] promenljive) */
+
+
+
     [data-bs-theme="dark"]{
       --bs-body-bg:#111111;
       --bs-dark-rgb:17,17,17;
@@ -68,8 +66,9 @@
       --bs-btn-hover-bg:var(--bs-primary);
       --bs-btn-hover-border-color:var(--bs-primary);
     }
-    /* hover efekat na kutijama sa cenama (i dalje samo Bootstrap klasa .border,
-       ovde joj samo dodajemo :hover stanje - nije nova klasa u HTML-u) */
+
+
+
     .border{
       transition:border-color 0.2s, box-shadow 0.2s, transform 0.2s;
     }
@@ -78,20 +77,22 @@
       box-shadow:0 0 14px rgba(236, 72, 153, 0.45), 0 0 26px rgba(255, 201, 60, 0.35);
       transform:scale(1.02);
     }
-    /* skaliranje dugmadi na hover (i dalje samo Bootstrapova klasa .btn) */
+
+
     .btn{
       transition:transform 0.15s, background-color 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
     }
     .btn:hover{
       transform:scale(1.06);
     }
-    /* naslov na vrhu stranice (i dalje samo Bootstrapove klase .text-center i .py-5,
-       ovde mu samo izjednačavamo veličinu fonta sa naslovima na ostalim stranicama) */
+
+
+
     .text-center.py-5 h1{
       font-size:2.2rem;
     }
-    /* dugme za temu (id="dugmeTema") - prikazuje sunce ili mesec u zavisnosti
-       od trenutne teme, bez ijedne nove CSS klase */
+
+    
     #dugmeTema svg[data-ikona="mesec"]{
       display:none;
     }

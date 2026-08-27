@@ -1,7 +1,3 @@
-/* Sugar Bar - style.css
-   Obicna CSS datoteka, bez SASS-a i bez CSS okvira (osim na strani usluge.html).
-   Seminarski rad - predmet Veb dizajn. */
-
 @font-face{
   font-family:"Poppins";
   src:url("../fonts/Poppins-Regular.woff") format("woff");
@@ -25,7 +21,7 @@
   --panel:#1a1a1a;
 }
 
-/* svetla tema - uključuje se JS-om preko atributa data-tema na <html> */
+/* svetla tema */
 :root[data-tema="light"]{
   --bg:#f4f4f4;
   --tekst:#141414;
@@ -85,7 +81,7 @@ h1, h2, h3{
   transform:scale(1.06);
 }
 
-/* ---------- header i navigacija ---------- */
+/* header i nav */
 
 header{
   border-bottom:1px solid var(--linija);
@@ -131,7 +127,7 @@ header{
   color:var(--akcenat);
 }
 
-/* ---------- padajuci meni (dropdown ispod "Usluge") ---------- */
+/* dropdown meni ispod usluge */
 
 .ima-padajuci{
   position:relative;
@@ -165,7 +161,7 @@ header{
   display:block;
 }
 
-/* ---------- podešavanja (jezik / veličina slova / tema) ---------- */
+/* settingz */
 
 .podesavanja{
   display:flex;
@@ -279,7 +275,7 @@ header{
   }
 }
 
-/* ---------- baner (hero) ---------- */
+/* baner */
 
 .baner{
   padding:70px 20px;
@@ -334,7 +330,7 @@ header{
   }
 }
 
-/* ---------- info sekcija (slika + tekst naizmenicno) ---------- */
+/* info sekcija */
 
 .info{
   padding:60px 20px;
@@ -385,7 +381,7 @@ header{
   }
 }
 
-/* ---------- footer ---------- */
+/* footer */
 
 footer{
   border-top:1px solid var(--linija);
@@ -420,7 +416,7 @@ footer p{
   font-size:0.85rem;
 }
 
-/* ---------- naslov stranice (O nama / Usluge / Kontakt) ---------- */
+/* naslov stranice- */
 
 .naslov-stranice{
   text-align:center;
@@ -436,7 +432,7 @@ footer p{
   color:var(--akcenat2);
 }
 
-/* ---------- video ---------- */
+/* video */
 
 .video-sadrzaj{
   max-width:900px;
@@ -450,7 +446,7 @@ footer p{
   display:block;
 }
 
-/* ---------- tim ---------- */
+/* team */
 
 .tim{
   max-width:1100px;
@@ -486,7 +482,7 @@ footer p{
   font-size:0.9rem;
 }
 
-/* ---------- cenovnik (lista usluga) ---------- */
+/* cenovnik */
 
 .cenovnik{
   max-width:800px;
@@ -519,7 +515,7 @@ footer p{
   white-space:nowrap;
 }
 
-/* ---------- kontakt forma ---------- */
+/* contact */
 
 .kontakt-sadrzaj{
   max-width:1100px;
@@ -630,7 +626,7 @@ footer p{
   }
 }
 
-/* ---------- slajder slika ---------- */
+/* slajder */
 
 .slajder{
   max-width:900px;

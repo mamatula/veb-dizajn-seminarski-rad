@@ -1,6 +1,3 @@
-// podesavanja.js - jezik (SR/EN), veličina slova i tema (svetla/tamna)
-// Sve se pamti u localStorage, pod jednim ključem "sugarbar-podesavanja".
-
 const recnik = {
   sr: {
     nav_pocetna: "Početna",
